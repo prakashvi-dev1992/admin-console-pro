@@ -1,0 +1,16 @@
+= render partial: 'admins/dashboard/sidebar'
+.row
+  .col-lg-8.main
+    .row
+      %ol.breadcrumb
+        %li
+          %a{:href => "/admins/home"}
+            %span.glyphicon.glyphicon-home{"aria-hidden" => "true"}
+        %li.active= @static_page.class
+    .row
+      .col-lg-12
+        .panel.panel-default
+          %h2.panel-heading
+            Edit Static Page
+          .panel-body
+            = render partial: 'admins/static_pages/form', locals: {static_page: @static_page}

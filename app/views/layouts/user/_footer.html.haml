@@ -1,0 +1,8 @@
+.navbar.navbar-default.navbar-fixed-bottom
+  .container
+    %p.navbar-text
+      = I18n.t('footer.footer_llc')
+  .footer_page
+    = link_to "Contact Us",contact_us_path
+    - StaticPage.all.each do |page|
+      = link_to page.name.capitalize,"/#{page.page_route}"

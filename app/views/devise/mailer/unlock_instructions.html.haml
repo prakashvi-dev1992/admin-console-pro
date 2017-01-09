@@ -1,0 +1,5 @@
+%p
+  Hello #{@resource.email}!
+%p= I18n.t("general.account_locked")
+%p= I18n.t("general.unlock_your_account")
+%p= link_to 'Unlock my account', unlock_url(@resource, unlock_token: @token)

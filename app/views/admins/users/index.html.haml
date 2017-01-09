@@ -1,0 +1,32 @@
+#sidebar
+  = render partial: 'admins/dashboard/sidebar'
+.row
+  .col-lg-9.main
+    .row
+      %ol.breadcrumb
+        %li
+          %a{:href => "/admins/home"}
+            %span.glyphicon.glyphicon-home{"aria-hidden" => "true"}
+        %li.active= @users.table_name.capitalize
+    .row
+      .panel.panel-default
+        .panel-heading
+          .col-lg-6
+            %h3
+              = @users.table_name.capitalize
+          .col-lg-3
+            .col-lg-2
+            .col-lg-1.adduserbtn
+              = link_to new_admins_user_path, class: "btn btn-info" do
+                %i.glyphicon.glyphicon-plus
+                %strong
+                  = I18n.t("admin.add_user")
+          .col-lg-3
+            .col-lg-2
+            .col-lg-1.filterbtn
+              = I18n.t("admin.filters")
+        .panel-body
+          #users.col-md-9
+            = render 'users'
+          #forms.col-md-3
+            = render 'filters'

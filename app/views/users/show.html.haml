@@ -1,0 +1,39 @@
+.row
+  .col-xs-10.col-xs-offset-1.col-sm-8.col-sm-offset-2.col-md-4.col-md-offset-4
+    .login-panel.panel.panel-default.loginpanel-margin
+      .panel-heading
+        = I18n.t("general.profile")
+      .panel-body
+        .col-lg-12
+          .row
+            .col-lg-12
+              .panel-body
+                .col-lg-7
+                  %label Email :
+                .col-lg-5
+                  = @user.email
+                .col-lg-7
+                  %label First Name :
+                .col-lg-5
+                  = @user.first_name
+                .col-lg-7
+                  %label Last Name :
+                .col-lg-5
+                  = @user.last_name
+                .col-lg-7
+                  %label City :
+                .col-lg-5
+                  = @user.city
+                .col-lg-7
+                  %label Mobile No :
+                .col-lg-5
+                  = @user.mobile_number
+                .col-lg-12
+                  .col-lg-6
+                    = link_to edit_user_registration_path, class: "btn btn-info" do
+                      %i.glyphicon.glyphicon-pencil
+                      %strong Update Info
+                  .col-lg-6
+                    = link_to  edit_user_path, class: "btn btn-info" do
+                      %i.glyphicon.glyphicon-wrench
+                      %strong Change your password

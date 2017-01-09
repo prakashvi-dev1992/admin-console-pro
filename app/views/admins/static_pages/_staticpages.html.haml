@@ -1,0 +1,35 @@
+%table.table.table-hover
+  %thead
+    %tr
+      %th=sortable "id"    
+      %th=sortable "name"
+      %th=sortable "label"
+      %th=sortable "page_route"
+      %th Content
+      %th Actions
+  %tbody
+    - @static_pages.each do |static_page|
+      %tr
+      %td
+        = link_to static_page.id, admins_static_page_path(static_page.id)
+      %td
+        = static_page.name
+      %td
+        = static_page.label
+      %td
+        = static_page.page_route
+      %td
+        %textarea{:cols => "25", :rows => "2"}
+          = static_page.content
+      %td
+        = link_to admins_static_page_path(id: static_page.id) do
+          %span.glyphicon.glyphicon-eye-open
+        |
+        = link_to edit_admins_static_page_path(id: static_page.id) do
+          %span.glyphicon.glyphicon-pencil
+        |
+        = link_to admins_static_page_path(static_page.id), method: :delete, data: {confirm: "Are you Sure ?"}  do
+          %span.glyphicon.glyphicon-trash
+= hidden_field_tag :direction, params[:direction]
+= hidden_field_tag :column, params[:column]
+= will_paginate @static_pages            

@@ -1,0 +1,57 @@
+= render partial: 'admins/dashboard/sidebar'
+.col-lg-8.main
+  .row
+    %ol.breadcrumb
+      %li
+        %a{:href => "/admins/home"}
+          %span.glyphicon.glyphicon-home{"aria-hidden" => "true"}
+      %li.active= @inquiry.class
+  .row
+    .panel.panel-default
+      .panel-heading
+        .col-lg-6
+          %h3
+            = I18n.t("admin.inquiries")
+        .col-lg-2
+          .col-lg-2
+          .col-lg-1
+        .col-lg-4.adduserbtn
+          = link_to edit_admins_inquiry_path(@inquiry.id), class: "btn btn-primary" do
+            %i.glyphicon.glyphicon-pencil
+            %strong Edit
+          = link_to admins_inquiries_path, class: "btn btn-info" do
+            %i.glyphicon.glyphicon-arrow-left
+            %strong Back        
+      .panel-body
+        %ul.nav.nav-tabs
+          %li.active
+            %a{"data-toggle" => "tab", :href => "#tab1default"} Basic Info
+          %li
+            %a{"data-toggle" => "tab", :href => "#tab2default"} Message
+        .tab-content
+          #tab1default.tab-pane.fade.in.active
+            .col-lg-6
+              .panel-body
+                .col-lg-7
+                  %label Name :
+                .col-lg-5
+                  = @inquiry.name
+                .col-lg-7
+                  %label Email :
+                .col-lg-5
+                  = @inquiry.email
+                .col-lg-7
+                  %label Phone :
+                .col-lg-5
+                  = @inquiry.phone
+                .col-sm-7
+                  %label Skype Id :
+                .col-sm-5
+                  = @inquiry.skype_id
+          #tab2default.tab-pane.fade
+            .col-lg-12
+              .panel-body
+                .col-lg-6
+                  = @inquiry.message
+
+

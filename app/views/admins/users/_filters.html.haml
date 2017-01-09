@@ -1,0 +1,9 @@
+.panel
+  = form_tag admins_users_path, :method=> "get", :remote => true,         :id => "user_page_search" do
+    = text_field_tag :first_name,nil,:class => "form-control filter_txt_field",placeholder: 'First Name'
+    = text_field_tag :last_name,nil,:class => "form-control filter_txt_field",placeholder: 'Last Name'
+    = text_field_tag :city,nil,:class => "form-control filter_txt_field",placeholder: 'City'
+    = button_tag(type: "submit", class: "btn btn-info filter_btn") do
+      Filter
+      %i.glyphicon.glyphicon-search   
+    = link_to "Clear Filter", request.path, class:"btn btn-info filter_btn"

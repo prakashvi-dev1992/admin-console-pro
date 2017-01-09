@@ -1,0 +1,3 @@
+$("#users").html("<%= escape_javascript(render("users")) %>");
+$("#forms").replace("<%= escape_javascript(render("filters")) %>");
+$('.pagination > a').attr('data-remote', 'true');

@@ -1,0 +1,8 @@
+- if @inquiry.errors.any?
+  #error_explanation
+    %h2
+      = pluralize(@inquiry.errors.count, "error")
+      prevented this record from being saved:
+    %ul
+      - @inquiry.errors.full_messages.each do |msg|
+        %li= msg

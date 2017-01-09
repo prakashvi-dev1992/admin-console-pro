@@ -1,0 +1,22 @@
+.row
+	.col-xs-12
+		.col-lg-12
+			.row
+				.col-lg-12
+					= form_for [:admins, static_page] do |f|
+						= render 'errors'
+						%br/
+						%label Name :
+						%br/
+						= f.text_field :name, class: "form-control"
+						%br/
+						%label Content :
+						= f.cktext_area :content ,:input_html => { :class => "ckeditor" } ,:label => false
+						%br/
+						%label Page Route :
+						= f.text_field :page_route, class: "form-control"
+						%br/
+						%label Label :
+						= f.text_field :label, class: "form-control"
+						%br
+						= f.submit 'Submit', :class => 'btn btn-success'

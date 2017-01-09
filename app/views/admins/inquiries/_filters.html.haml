@@ -1,0 +1,9 @@
+.panel
+  = form_tag admins_inquiries_path, :method=> "get", :remote => true ,    :id => "inquiry_page_search" do
+    = text_field_tag :name,nil,:class => "form-control filter_txt_field",placeholder: 'Name'
+    = text_field_tag :email,nil,:class => "form-control filter_txt_field",placeholder: 'Email'
+    = text_field_tag :skype_id,nil,:class => "form-control filter_txt_field",placeholder: 'Skype Id'
+    = button_tag(type: "submit", class: "btn btn-info filter_btn") do
+      Filter
+      %i.glyphicon.glyphicon-search   
+    = link_to "Clear Filter", request.path, class:"btn btn-info filter_btn"

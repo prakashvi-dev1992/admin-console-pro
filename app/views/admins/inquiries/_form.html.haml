@@ -1,0 +1,23 @@
+= form_for [:admins, @inquiry] do |f|
+  = render 'errors'
+  %br/
+  %label Name :
+  %br/
+  = f.text_field :name, class: "form-control"
+  %br/
+  %label Email :
+  %br/         
+  = f.text_field :email, class: "form-control"
+  %br/
+  %label Phone :
+  %br/
+  = f.text_field :phone, class: "form-control"
+  %br/
+  %label Skype Id :
+  %br/
+  = f.text_field :skype_id, class: "form-control"
+  %br/
+  %label Message:
+  = f.text_area :message, class: "form-control"
+  %br/  
+  = f.submit "submit", class: "btn btn-success"   

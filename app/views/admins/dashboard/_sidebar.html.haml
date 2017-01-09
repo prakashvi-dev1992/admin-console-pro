@@ -1,0 +1,18 @@
+#sidebar-collapse.col-sm-3.col-lg-2.sidebar
+  %ul.nav.menu
+    %li
+      %a{:href => "/admins/home"}
+        %span.glyphicon.glyphicon-home{"aria-hidden" => "true"}
+          = I18n.t("admin.dashboard")
+    %li.parent
+      %a{:href => "/admins/users"}
+        %span.glyphicon.glyphicon-user{"aria-hidden" => "true"}
+          = I18n.t("admin.users")
+    %li.parent
+      %a{:href => "/admins/static_pages"}
+        %span.glyphicon.glyphicon-file{"aria-hidden" => "true"}
+          = I18n.t("admin.static_pages")
+    %li.parent
+      %a{:href => "/admins/inquiries"}
+        %span.glyphicon.glyphicon-file{"aria-hidden" => "true"}
+          = I18n.t("admin.inquiries")          

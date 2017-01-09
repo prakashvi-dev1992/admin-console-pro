@@ -1,0 +1,41 @@
+- if notice.present?
+  .padding-left.margin-top.alert.alert-success{:role => "alert"}
+    %i.margin-left-small.form-message-icon.margin-right-small.icon.icon-notification
+    = notice
+
+= form_for @inquiry do |f|
+  =render 'errors'
+  .field
+    .col-lg-4
+      = f.label :name, "Name"
+    .col-lg-8
+    = f.text_field :name, :required => true, hide_label: true, autofocus: true, :class => "form-control"
+    %br/
+  .field
+    .col-lg-4
+      = f.label :email, "Email"
+    .col-lg-8
+    = f.email_field :email, :required => true, hide_label: true, autofocus: true, :class => "form-control"
+    %br/
+  .field
+    .col-lg-4
+      = f.label :phone, "Phone"
+    .col-lg-8
+    = f.text_field :phone, :required => true, hide_label: true, autofocus: true, :class => "form-control"
+    %br/
+  .field
+    .col-lg-4
+      = f.label :skype_id, "Skype Id"
+    .col-lg-8
+    = f.text_field :skype_id, :required => false, hide_label: true, autofocus: true, :class => "form-control"
+    %br/
+  .field
+    .col-lg-4
+      = f.label :message, "Message"
+    .col-lg-8  
+    = f.text_area :message, :required => true, hide_label: true, placeholder: "Leave a message...",:input_html=>{:cols => "30", :rows => "2"}, autofocus: true, :class => "form-control"
+    %br/    
+  %hr
+  .action_container
+    .col-lg-6
+      = f.submit "Send", :class => "btn btn-primary"

@@ -1,0 +1,36 @@
+%nav.navbar.navbar-default.navbar-static-top
+  .container-fluid
+    .navbar-header
+      -if current_user
+        %a.navbar-brand{:href => "/home"} 
+          = I18n.t('general.title')
+      -else
+        %a.navbar-brand{:href => "/dashboard"} 
+          = I18n.t('general.title')
+    #bs-example-navbar-collapse-1.collapse.navbar-collapse
+      %ul.nav.navbar-nav.navbar-right
+        - if current_user
+          %li.dropdown
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              %span.glyphicon.glyphicon-user{"aria-hidden" => "true"}
+              = current_user.first_name
+              %span.caret
+            %ul.dropdown-menu
+              %li
+                %a{:href => "/users/#{current_user.friendly_id}"}
+                  %span.glyphicon.glyphicon-user{"aria-hidden" => "true"}
+                  = I18n.t('general.profile')
+              %li.divider{:role => "separator"}
+              %li
+                %a{"data-method" => "delete", :href => "/user/logout"}
+                  %span.glyphicon.glyphicon-log-out{"aria-hidden" => "true"}>
+                  = I18n.t('general.logout')
+        - else
+          %li
+            %a{:href => "/user/login"}
+              %span.glyphicon.glyphicon-log-in{"aria-hidden" => "true"}>
+                = I18n.t('general.login')
+          %li
+            %a{:href => "/users/sign_up"}
+              %span.glyphicon.glyphicon-new-window{"aria-hidden" => "true"}>
+                = I18n.t('general.sign_up')  

@@ -1,0 +1,118 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  admin:
+    dashboard: "Dashboard"
+    dashboard_welcome:
+      welcome: " Welcome to Admin D'console."
+    users: "Users"
+    static_pages: "Static Pages"
+    inquiries: "Inquiry"
+    add_static_pages: "Add Static Page"
+    add_user: "Add User"
+    add_inquiry: "Add Inquiry"
+    home: "Home"
+    coming_soon: "coming soon..."
+    sign_up: "Admin Sign Up"
+    login: "Admin Login"
+    basic_info: "Basic Info"
+    view_content: "View Content"
+    roles: "Roles"
+    filters: "Filters"
+    user_details: "User Details"
+  general:
+    dashboard: "Only one step behind registration !!"
+    title: "Admin D'console"
+    sign_in_successfully: "Sign in successfully."
+    about: "About"
+    home: "You are at Home"  
+    login: "Login"
+    logout: "Logout"
+    sign_up: "Sign Up"
+    profile: "Profile"
+    have_an_account: "HAVE AN ACCOUNT?"
+    forgot_password: "Forgot your password?"
+    create_an_account: "CREATE AN ACCOUNT"
+    change_password: "Change your password?"
+    edit_profile: "Edit Profile"
+    edit: "Edit"
+    update: "UPDATE"
+    cancel_my_account: "CANCEL MY ACCOUNT"
+    back: "BACK"
+    cancel: "Cancel"
+    confirmation_password: "Confirmation password"
+    password_updated_successfully: "Password updated successfully."  
+    confirm_email: "You can confirm your account email through the link below:"
+    confirm_my_account: "Confirm my account"
+    request_to_change_password: "Someone has requested a link to change your password. You can do this through the link below."
+    change_my_password: "Change my password"
+    ignore_email: "If you didn't request this, please ignore this email. Your password won't change until you access the link above and create a new one."
+    account_locked: "Your account has been locked due to an excessive number of unsuccessful sign in attempts."
+    unlock_your_account: "Click the link below to unlock your account:"
+    unlock_my_account: "Unlock my account"
+    create_a_page: "Page created successfully"
+    destroy_a_page: "Page deleted successfully"
+    update_a_page: "Page updated successfully"
+    create_a_user: "User created successfully"
+    destroy_a_user: "User deleted successfully"
+    update_a_user: "User updated successfully"
+    create_a_inquiry: "Inquiry created successfully"
+    destroy_a_inquiry: "Inquiry deleted successfully"
+    update_a_inquiry: "Inquiry updated successfully"        
+  header:
+    home: "Home"
+    contact: "Contact Us"
+  footer:
+    footer_llc: "© 2016-2017 Admin D'console"
+  page_not_found:
+    text_h1: "Page not found."
+    text_p: "Page not found."
+  contact:
+    form_title: "Contact Us"
+    success_alert: "Thank you! Your message has been sent"
+    error_alert: "Something wrong...!!!"
+    name_label: "Name*"
+    email_label: "Email*"
+    phone_label: "Phone"
+    skype_label: "Skype"
+    message_label: "Message*"    

@@ -1,0 +1,23 @@
+= form_for [:admins, @user] do |f|
+  = render 'shared/error_messages'
+  %br/
+  %label First Name :
+  %br/
+  = f.text_field :first_name, class: "form-control"
+  %br/
+  %label Last Name :
+  %br/         
+  = f.text_field :last_name, class: "form-control"
+  %br/
+  %label City :
+  %br/
+  = f.text_field :city, class: "form-control"
+  %br/
+  %label Mobile No :
+  %br/
+  = f.text_field :mobile_number, class: "form-control"
+  %br/
+  %label Add Role:
+  = select_tag :role, options_for_select(User.user_roles.map{ |c| [c[0]]}),:class=>'form-control',:prompt=>'Select Role.....'
+  %br/  
+  = f.submit "Update", class: "btn btn-success"    

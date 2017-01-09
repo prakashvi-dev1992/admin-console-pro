@@ -1,0 +1,60 @@
+= render partial: 'sidebar'
+.col-lg-10.main
+  .row
+    %ol.breadcrumb
+      %li
+        %a{:href => "/admins/home"}
+          %span.glyphicon.glyphicon-home{"aria-hidden" => "true"}
+      %li.active
+        = I18n.t("admin.home")
+  .row
+    .col-lg-12
+      %h1.page-header
+        = I18n.t("admin.dashboard")
+  .row
+    .col-xs-12.col-md-6.col-lg-3
+      .panel.panel-blue.panel-widget
+        .row.no-padding
+          .col-sm-3.col-lg-5.widget-left
+          .col-sm-9.col-lg-7.widget-right
+            .large
+              = I18n.t("admin.coming_soon")
+            .text-muted
+              = I18n.t("admin.coming_soon")
+    .col-xs-12.col-md-6.col-lg-3
+      .panel.panel-orange.panel-widget
+        .row.no-padding
+          .col-sm-3.col-lg-5.widget-left
+          .col-sm-9.col-lg-7.widget-right
+            .large
+              = I18n.t("admin.coming_soon")
+            .text-muted
+              = I18n.t("admin.coming_soon")
+    .col-xs-12.col-md-6.col-lg-3
+      .panel.panel-teal.panel-widget
+        .row.no-padding
+          .col-sm-3.col-lg-5.widget-left
+          .col-sm-9.col-lg-7.widget-right
+            .large
+              = I18n.t("admin.coming_soon")
+            .text-muted
+              = I18n.t("admin.coming_soon")
+    .col-xs-12.col-md-6.col-lg-3
+      .panel.panel-red.panel-widget
+        .row.no-padding
+          .col-sm-3.col-lg-5.widget-left
+          .col-sm-9.col-lg-7.widget-right
+            .large
+              = I18n.t("admin.coming_soon")
+            .text-muted
+              = I18n.t("admin.coming_soon")
+  / /.row
+  .row
+    .col-lg-12
+      .panel.panel-default
+        .panel-heading
+          = I18n.t("admin.dashboard_welcome.welcome")
+        .panel-body
+  / /.row
+  .row
+  / /.row

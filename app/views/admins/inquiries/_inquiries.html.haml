@@ -1,0 +1,34 @@
+%table.table.table-hover
+  %thead
+    %tr
+      %th=sortable "id"
+      %th=sortable "name"
+      %th=sortable "email"
+      %th Phone
+      %th=sortable "skype_id"
+      %th Actions
+  %tbody
+    - @inquiries.each do |inquiry|
+      %tr
+      %td
+        = link_to inquiry.id,admins_inquiry_path(inquiry.id)
+      %td
+        = inquiry.name
+      %td
+        = inquiry.email
+      %td
+        = inquiry.phone
+      %td
+        = inquiry.skype_id
+      %td
+        = link_to admins_inquiry_path(inquiry.id) do
+          %span.glyphicon.glyphicon-eye-open
+        |
+        = link_to edit_admins_inquiry_path(inquiry.id) do
+          %span.glyphicon.glyphicon-pencil
+        |
+        = link_to admins_inquiry_path(inquiry.id), method: :delete, data: {confirm: "Are you Sure ?"}  do
+          %span.glyphicon.glyphicon-trash
+= hidden_field_tag :direction, params[:direction]
+= hidden_field_tag :column, params[:column]
+= will_paginate @inquiries            

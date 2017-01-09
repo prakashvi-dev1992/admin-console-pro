@@ -1,0 +1,32 @@
+= render partial: 'admins/dashboard/sidebar'
+.row
+  .col-lg-9.main
+    .row
+      %ol.breadcrumb
+        %li
+          %a{:href => "/admins/home"}
+            %span.glyphicon.glyphicon-home{"aria-hidden" => "true"}
+        %li.active
+          = I18n.t("admin.static_pages")
+    .row
+      .panel.panel-default
+        .panel-heading
+          .col-lg-6
+            %h3
+              = I18n.t("admin.static_pages")
+          .col-lg-3
+            .col-lg-2
+            .col-lg-1.adduserbtn
+              = link_to new_admins_static_page_path, class: "btn btn-info" do
+                %i.glyphicon.glyphicon-plus
+                %strong
+                  = I18n.t("admin.add_static_pages")
+          .col-lg-3
+            .col-lg-2
+            .col-lg-1.filterbtn
+              = I18n.t("admin.filters")
+        .panel-body
+          #staticpages.col-md-9
+            = render 'staticpages'            
+          #forms.col-md-3
+            = render 'filters'

@@ -1,0 +1,37 @@
+%table.table.table-hover
+  %thead
+    %tr
+      %th=sortable "id"
+      %th=sortable "email"
+      %th=sortable "first_name"
+      %th=sortable "last_name"
+      %th=sortable "city"
+      %th Mobile No
+      %th Actions
+  %tbody
+    - @users.each do |user|
+      %tr
+        %td
+          = link_to user.id, admins_user_path(user.id)
+        %td
+          = user.email
+        %td
+          = user.first_name
+        %td
+          = user.last_name
+        %td
+          = user.city
+        %td
+          = user.mobile_number
+        %td
+          = link_to admins_user_path(user.id) do
+            %span.glyphicon.glyphicon-eye-open
+          |
+          = link_to edit_admins_user_path(user.id) do
+            %span.glyphicon.glyphicon-pencil
+          |
+          = link_to admins_user_path(user.id), method: :delete, data: {confirm: "Are you Sure ?"}  do
+            %span.glyphicon.glyphicon-trash 
+= hidden_field_tag :direction, params[:direction]
+= hidden_field_tag :column, params[:column]
+= will_paginate @users
