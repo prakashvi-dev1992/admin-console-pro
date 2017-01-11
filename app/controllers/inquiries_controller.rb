@@ -19,4 +19,9 @@ class InquiriesController < ApplicationController
   def inquiry_params
     params[:inquiry].permit(:name, :email, :phone, :message, :skype_id)
   end
+
+  def abc
+    puts "h i"
+  end
+
 end
