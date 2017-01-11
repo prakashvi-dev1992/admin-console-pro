@@ -21,7 +21,7 @@ class InquiriesController < ApplicationController
   end
 
   def abc
-    puts "h i"
+    puts "h  i"
   end
 
 end
