@@ -6,6 +6,7 @@ class InquiriesController < ApplicationController
 
   def create
     @inquiry = Inquiry.new(inquiry_params)
+    
     if @inquiry.save
       redirect_to root_path, notice: I18n.t("contact.success_alert")
     else
